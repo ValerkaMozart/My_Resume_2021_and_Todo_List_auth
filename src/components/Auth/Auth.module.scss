@@ -1,0 +1,156 @@
+.Auth {
+  margin: 30px auto;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 3px 10px 1px rgba(0, 0, 0, .4);
+
+  .auth_area {
+    display: flex;
+    border: 1px solid black;
+    width: 70%;
+    border-radius: 6px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    @media (max-width: 646px) {
+      padding: 5px;
+    }
+
+    input {
+      border: none;
+      border-bottom: 2px solid #ccc;
+      outline: none;
+      margin: 15px auto;
+    }
+
+    .email_area {
+      position: relative;
+      width: 60%;
+      @media (max-width: 646px) {
+        & {
+          width: 100%;
+        }
+      }
+
+      input {
+        position: relative;
+        width: 100%;
+
+        &:focus ~ label {
+          transform: translateX(-150px);
+        }
+
+        &:valid ~ label {
+          transform: translateX(-150px);
+        }
+
+        @media (max-width: 1064px) {
+          &:focus ~ label {
+            display: none;
+          }
+
+          &:valid ~ label {
+            display: none;
+          }
+        }
+      }
+
+      label {
+        position: absolute;
+        left: 2px;
+        top: 15px;
+        transition: all .4s ease-in-out;
+
+      }
+    }
+
+    .password_area {
+      position: relative;
+      width: 60%;
+      @media (max-width: 646px) {
+        & {
+          width: 100%;
+        }
+
+      }
+
+      input {
+        position: relative;
+        width: 100%;
+
+        &:focus ~ label {
+          transform: translateX(-150px);
+        }
+
+        &:valid ~ label {
+          transform: translateX(-150px);
+        }
+        @media (max-width: 1064px) {
+          &:focus ~ label {
+            display: none;
+          }
+
+          &:valid ~ label {
+            display: none;
+          }
+        }
+      }
+
+      label {
+        position: absolute;
+        left: 2px;
+        top: 15px;
+        transition: all .4s ease-in-out;
+      }
+
+    }
+
+    .checkbox {
+
+      & label {
+        margin-left: 10px;
+      }
+    }
+
+  }
+
+  .btn_area {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    @media (max-width: 646px) {
+      & {
+        flex-direction: column;
+      }
+      & button {
+        margin-top: 10px;
+      }
+    }
+
+    & button {
+      border: none;
+      padding: 5px 15px;
+      background: #a9fffc;
+      border-radius: 6px;
+      transition: all .4s ease-in-out;
+
+      &:hover {
+        box-shadow: inset 0 0 10px 2px #00ff8c;
+        transform: scale(1.2);
+      }
+
+      &:active {
+        transform: scale(0.9);
+        transition: all .1s ease-in-out;
+        opacity: .5;
+      }
+    }
+  }
+}

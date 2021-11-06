@@ -1,0 +1,154 @@
+.NavBar {
+  max-width: 100%;
+  position: sticky;
+  background: white;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  border-bottom: 2px solid black;
+
+  .container {
+    max-width: 1320px;
+    margin: 0 auto;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .logo {
+      width: 1320px;
+      margin: 0 auto;
+      height: 100px;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: center;
+
+      a {
+        transition: all .4s ease-in-out;
+
+        &:hover {
+          transform: scale(1.1);
+          opacity: .5;
+        }
+      }
+
+      img {
+        width: 100px;
+      }
+    }
+
+    .navLinks {
+      flex: 3;
+
+      ul {
+        display: flex;
+        justify-content: space-around;
+
+        li {
+          position: relative;
+          transition: all .4s ease-in-out;
+
+          a {
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all .4s ease;
+
+            &:hover {
+              opacity: .5;
+            }
+          }
+
+          &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            background: black;
+            border: 1px solid black;
+            left: 0;
+            bottom: -20px;
+            transition: all .4s ease-in-out;
+          }
+
+          &:hover:after {
+            opacity: .5;
+          }
+        }
+
+
+      }
+
+      .mob_links {
+        margin-right: 10px;
+
+        & input {
+          display: none;
+
+          &:checked + label {
+            transform: rotate(-90deg);
+
+            &:after {
+              width: 50%;
+              transform: translate(25px, -6px) rotate(-25deg);
+            }
+
+            &:before {
+              width: 50%;
+              transform: translate(25px, 6px) rotate(25deg);
+            }
+          }
+        }
+
+        & label {
+          position: relative;
+          display: block;
+          width: 50px;
+          border: 2px solid black;
+          background: black;
+          transition: all .4s ease-in-out;
+
+          &:after, &:before {
+            content: '';
+            display: block;
+            width: 100%;
+            position: absolute;
+            border: 2px solid black;
+            background: black;
+            transition: all .4s ease-in-out;
+          }
+
+          &:after {
+            left: 0;
+            top: 10px;
+
+          }
+
+          &:before {
+            left: 0;
+            top: -15px;
+          }
+        }
+      }
+
+      @media (min-width: 830px) {
+        .mob_links {
+          display: none;
+        }
+      }
+
+
+      @media (max-width: 830px) {
+        & {
+          flex: 0 0 10%;
+        }
+        & ul {
+          display: none;
+        }
+      }
+
+
+    }
+  }
+}
+

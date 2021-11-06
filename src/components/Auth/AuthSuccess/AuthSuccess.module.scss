@@ -1,0 +1,30 @@
+.AuthSuccess {
+  margin: 30px auto;
+  padding: 5px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 6px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 3px 10px 1px rgba(0, 0, 0, .4);
+  & button {
+    border: none;
+    padding: 5px 15px;
+    background: rgba(255,0,2,0.59);
+    border-radius: 6px;
+    margin: 10px;
+    transition: all .4s ease-in-out;
+
+    &:hover {
+      box-shadow: inset 0 0 10px 2px rgba(51,0,255,0.59);
+      transform: scale(1.2);
+    }
+    &:active {
+      transform: scale(0.9);
+      transition: all .1s ease-in-out;
+      opacity: .5;
+    }
+  }
+}

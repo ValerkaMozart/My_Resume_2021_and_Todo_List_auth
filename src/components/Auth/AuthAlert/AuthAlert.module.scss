@@ -1,0 +1,26 @@
+.AuthAlert {
+  margin: 30px auto;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: rgba(255,0,17,0.59);
+  align-items: center;
+  box-shadow: 2px 3px 10px 1px rgba(0, 0, 0, .4);
+  & button {
+    margin-left: 10px;
+    background: inherit;
+    border: none;
+    transition: all .4s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      background: #00ff8c;
+    }
+    &:active {
+      opacity: 0.3;
+      transition: all .1s ease-in-out;
+    }
+  }
+}

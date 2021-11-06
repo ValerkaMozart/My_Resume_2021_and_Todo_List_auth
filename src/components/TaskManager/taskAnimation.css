@@ -1,0 +1,30 @@
+.taskAnimation-enter {
+    transform: translateX(-200px);
+    opacity: 0;
+}
+.taskAnimation-enter-active {
+    transform: translateX(50px);
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+.taskAnimation-enter-done {
+    transform: translateX(0px);
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+.taskAnimation-exit {
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.taskAnimation-exit-active {
+    transform: translateX(200px);
+    opacity: 0;
+    transition: all .1s ease-in-out;
+}
+.taskAnimation-exit-done {
+    transform: translateX(200px);
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}

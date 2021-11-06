@@ -1,0 +1,29 @@
+.alert-enter {
+    transform: scale(0);
+    opacity: 0;
+}
+.alert-enter-active {
+    transform: scale(1);
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+.alert-enter-done {
+    transform: scale(1);
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+.alert-exit {
+    transform: scale(1);
+    opacity: 1;
+}
+.alert-exit-active {
+    transform: scale(0);
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+.alert-exit-done {
+    transform: scale(0);
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
